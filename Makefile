@@ -1151,7 +1151,8 @@ ext-mod-dirs := \
  	$(ext-mod-dir)/qcom/opensource/mm-sys-kernel/ubwcp \
  	$(ext-mod-dir)/qcom/opensource/securemsm-kernel/smmu-proxy \
 	$(ext-mod-dir)/qcom/opensource/video-kernel \
-	$(ext-mod-dir)/nxp/opensource/driver
+	$(ext-mod-dir)/nxp/opensource/driver \
+        $(ext-mod-dir)/st/opensource/driver
 ext-mod-dirs := $(subst $(srctree)/,,$(ext-mod-dirs))
 
 #Default location for installed headers
