@@ -1327,4 +1327,14 @@ config MMI_LPM_DBG
 	  Set MMI_LPM_DBG to
 	  Sending relative uevent to trigger dropbox when necessary.
 	  is called lis3lv02d_i2c.
+
+config QTI_CRYPTO_FDE
+        tristate "Enable common crypto functionality used for FDE"
+        default n
+        help
+          Say 'Y' to enable the common crypto implementation to be used by
+          different storage layers such as UFS and EMMC for full disk hardware
+          encryption. this is control only for enable inline crypto engine for Full
+          Disk Encryption.
+
 endmenu

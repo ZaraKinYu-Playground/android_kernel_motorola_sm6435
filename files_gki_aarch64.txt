@@ -13,6 +13,8 @@ arch/arm64/crypto/ghash-ce-glue.c
 arch/arm64/crypto/poly1305-glue.c
 arch/arm64/crypto/polyval-ce-core.S
 arch/arm64/crypto/polyval-ce-glue.c
+arch/arm64/crypto/sha1-ce-core.S
+arch/arm64/crypto/sha1-ce-glue.c
 arch/arm64/crypto/sha2-ce-core.S
 arch/arm64/crypto/sha2-ce-glue.c
 arch/arm64/crypto/sha256-glue.c
@@ -49,6 +51,7 @@ arch/arm64/include/asm/brk-imm.h
 arch/arm64/include/asm/bug.h
 arch/arm64/include/asm/cache.h
 arch/arm64/include/asm/cacheflush.h
+arch/arm64/include/asm/cfi.h
 arch/arm64/include/asm/checksum.h
 arch/arm64/include/asm/clocksource.h
 arch/arm64/include/asm/cmpxchg.h
@@ -883,6 +886,7 @@ drivers/dma-buf/heaps/deferred-free-helper.h
 drivers/dma-buf/heaps/page_pool.c
 drivers/dma-buf/heaps/page_pool.h
 drivers/dma-buf/sync_file.c
+drivers/dma-buf/udmabuf.c
 drivers/dma/dmaengine.c
 drivers/dma/dmaengine.h
 drivers/dma/of-dma.c
@@ -1074,6 +1078,7 @@ drivers/gpu/drm/ttm/ttm_range_manager.c
 drivers/gpu/drm/ttm/ttm_resource.c
 drivers/gpu/drm/ttm/ttm_sys_manager.c
 drivers/gpu/drm/ttm/ttm_tt.c
+drivers/gpu/host1x/context_bus.c
 drivers/gpu/trace/trace_gpu_mem.c
 drivers/hid/hid-apple.c
 drivers/hid/hid-core.c
@@ -2190,6 +2195,7 @@ fs/f2fs/inline.c
 fs/f2fs/inode.c
 fs/f2fs/iostat.c
 fs/f2fs/iostat.h
+fs/f2fs/lock.c
 fs/f2fs/namei.c
 fs/f2fs/node.c
 fs/f2fs/node.h
@@ -2793,6 +2799,7 @@ include/linux/args.h
 include/linux/arm-smccc.h
 include/linux/arm_ffa.h
 include/linux/arm_sdei.h
+include/linux/array_size.h
 include/linux/asn1.h
 include/linux/asn1_ber_bytecode.h
 include/linux/asn1_decoder.h
@@ -3536,6 +3543,7 @@ include/linux/perf_regs.h
 include/linux/personality.h
 include/linux/pfn.h
 include/linux/pfn_t.h
+include/linux/pgalloc.h
 include/linux/pgsize_migration.h
 include/linux/pgsize_migration_inline.h
 include/linux/pgtable.h
@@ -4974,6 +4982,7 @@ include/uapi/linux/tty.h
 include/uapi/linux/tty_flags.h
 include/uapi/linux/types.h
 include/uapi/linux/ublk_cmd.h
+include/uapi/linux/udmabuf.h
 include/uapi/linux/udp.h
 include/uapi/linux/uhid.h
 include/uapi/linux/uinput.h
@@ -5182,6 +5191,7 @@ kernel/bpf/devmap.c
 kernel/bpf/disasm.c
 kernel/bpf/disasm.h
 kernel/bpf/dispatcher.c
+kernel/bpf/dmabuf_iter.c
 kernel/bpf/hashtab.c
 kernel/bpf/helpers.c
 kernel/bpf/inode.c
@@ -5649,6 +5659,7 @@ lib/lz4/lz4_decompress.c
 lib/lz4/lz4defs.h
 lib/lz4/lz4hc_compress.c
 lib/lzo/lzo1x_compress.c
+lib/lzo/lzo1x_compress_safe.c
 lib/lzo/lzo1x_decompress_safe.c
 lib/lzo/lzodefs.h
 lib/maple_tree.c
@@ -5830,6 +5841,9 @@ mm/maccess.c
 mm/madvise.c
 mm/memblock.c
 mm/memcontrol.c
+mm/memfd-ashmem-shim-internal.h
+mm/memfd-ashmem-shim.c
+mm/memfd-ashmem-shim.h
 mm/memfd.c
 mm/memory.c
 mm/memory_hotplug.c
@@ -6653,6 +6667,7 @@ security/selinux/include/avc.h
 security/selinux/include/avc_ss.h
 security/selinux/include/classmap.h
 security/selinux/include/conditional.h
+security/selinux/include/hash.h
 security/selinux/include/ibpkey.h
 security/selinux/include/ima.h
 security/selinux/include/initial_sid_to_string.h

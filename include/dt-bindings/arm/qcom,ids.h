@@ -281,8 +281,8 @@
 #define QCOM_ID_TUNA			655
 #define QCOM_ID_TUNA7			681
 #define QCOM_ID_KERA			659
+#define QCOM_ID_KERA_QMB		720
 #define QCOM_ID_KERAP			686
-#define QCOM_ID_KERAP_QMB		720
 #define QCOM_ID_KERAP_QNA		721
 #define QCOM_ID_PARROTPRO		663
 #define QCOM_ID_PARROTPROP		713
@@ -296,6 +296,9 @@
 #define QCOM_ID_MONTAGUEP		582
 #define QCOM_ID_CQ7790M         731
 #define QCOM_ID_CQ7790S         732
+#define QCOM_ID_CQ4390M			773
+#define QCOM_ID_CQ4390S			774
+#define QCOM_ID_MONTAGUEQMB		734
 
 /*
  * The board type and revision information, used by Qualcomm bootloaders and
